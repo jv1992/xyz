@@ -38,20 +38,15 @@
             "[parameters('networkSettings').addressPrefix]"
           ]
         },
-        "subnets": [
-          {
-            "name": "[parameters('networkSettings').subnets.dmz.name]",
-            "properties": {
-              "addressPrefix": "[parameters('networkSettings').subnets.dmz.prefix]"
-            }
-          },
-          {
-            "name": "[parameters('networkSettings').subnets.data.name]",
-            "properties": {
-              "addressPrefix": "[parameters('networkSettings').subnets.data.prefix]"
-            }
-          }
-        ]
+       
+        "subnet": {
+                          "id": "[parameters('existingSubnetResourceId')]"
+                        },
+        
+        
+        
+        
+        
       }
     },
     {
